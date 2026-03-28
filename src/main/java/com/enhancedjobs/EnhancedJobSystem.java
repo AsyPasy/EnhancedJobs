@@ -73,17 +73,17 @@ public class EnhancedJobSystem extends JavaPlugin {
         pm.registerEvents(new RewardListener(this),        this);
         pm.registerEvents(new GUIListener(this),           this);
 
-        // ZNPCS vendor listener (soft dep – only register if ZNPCS is loaded)
-        if (getServer().getPluginManager().getPlugin("ZNPCS") != null) {
-            try {
-                pm.registerEvents(new ZNPCSVendorListener(this, vendorManager), this);
-                getLogger().info("ZNPCS vendor hook registered.");
-            } catch (Exception e) {
-                getLogger().warning("ZNPCS found but hook failed: " + e.getMessage());
-            }
-        } else {
-            getLogger().info("ZNPCS not found – vendor NPC feature disabled.");
-        }
+       // ZNPCS vendor listener (soft dep – only register if ZNPCS is loaded)
+if (getServer().getPluginManager().getPlugin("ZNPCS") != null) {
+    boolean hooked = ZNPCSVendorListener.register(this, vendorManager);
+    if (hooked) {
+        getLogger().info("ZNPCS vendor hook registered.");
+    } else {
+        getLogger().warning("ZNPCS found but vendor hook failed to register.");
+    }
+} else {
+    getLogger().info("ZNPCS not found – vendor NPC feature disabled.");
+}
 
         // 7. Commands
         var jobCmd = getCommand("job");
