@@ -1,8 +1,6 @@
 package com.enhancedjobs.npc;
-
 import com.enhancedjobs.EnhancedJobSystem;
 import com.enhancedjobs.gui.VendorGUI;
-import io.github.znetworkw.znpcservers.npc.event.NPCInteractEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
