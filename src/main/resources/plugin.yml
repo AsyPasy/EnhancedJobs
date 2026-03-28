@@ -1,0 +1,26 @@
+name: EnhancedJobSystem
+version: '1.0.0'
+main: com.enhancedjobs.EnhancedJobSystem
+api-version: '1.20'
+authors: [ Author ]
+description: An enhanced job system with 10 levels per profession.
+softdepend: [ GoldEconomy ]
+
+commands:
+  jobs:
+    description: Open the jobs GUI
+    usage: /jobs
+    aliases: [ job ]
+    permission: enhancedjobs.use
+  jobsadmin:
+    description: Open the admin item GUI (OP only)
+    usage: /jobsadmin
+    permission: enhancedjobs.admin
+
+permissions:
+  enhancedjobs.use:
+    description: Allows using the jobs system
+    default: true
+  enhancedjobs.admin:
+    description: Admin access
+    default: op

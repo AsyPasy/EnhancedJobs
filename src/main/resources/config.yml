@@ -1,0 +1,20 @@
+# ─────────────────────────────────────────
+#   EnhancedJobSystem Configuration
+# ─────────────────────────────────────────
+
+# How often the Auto Farm harvests crops (minutes)
+auto-farm-harvest-interval: 10
+
+# How long the Money Tree takes to grow (hours)
+money-tree-growth-hours: 15
+
+# Quest system
+quest-reset-hours: 24
+base-extra-quest-cost: 15.0
+
+# Passive XP granted per crop harvested
+farmer-passive-xp-per-crop: 0.2
+
+# Advanced Fertilizer settings
+fertilizer-duration-minutes: 10
+fertilizer-cooldown-hours: 3
